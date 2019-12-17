@@ -13,16 +13,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by xts on 2016/3/9.
- * 用法:
- * 初始化的时候
- * mIndicator.initSize(80,32,6);
- * mIndicator.setNumbers(3);
- * 和ViewPager关联的时候
- * setSelectedState(int position)
- */
-public class PreviewIndicator extends LinearLayout {
+        * Created by xts on 2016/3/9.
+        * 用法:
+        *          初始化的时候
+        *          mIndicator.initSize(80,32,6);
+        mIndicator.setNumbers(3);
+        和ViewPager关联的时候
+        setSelectedState(int position)
 
+        */
+
+public class PreviewIndicator extends LinearLayout {
     //指示器个数
     private int INDICATOR_COUNT = 3;
     private List<ImageView> mImageList = new ArrayList<>();
@@ -43,14 +44,14 @@ public class PreviewIndicator extends LinearLayout {
     }
 
     //设置指示器点的个数
-    public void setNumbers(int number) {
+    public void setNumbers(int number){
         INDICATOR_COUNT = number;
         initView();
     }
 
     //初始化所有的指示器点
     private void initView() {
-
+        //initSize();
         removeAllViews();
         mImageList.clear();
         for (int i = 0; i < INDICATOR_COUNT; i++) {
@@ -68,12 +69,11 @@ public class PreviewIndicator extends LinearLayout {
 
     /**
      * 初始化指示器点的宽高参数,单位dp
-     *
      * @param chosedSize 选中指示器点的宽度
-     * @param nomal      未选中时指示器点的宽度
-     * @param hei        指示器点的高度
+     * @param nomal 未选中时指示器点的宽度
+     * @param hei 指示器点的高度
      */
-    public void initSize(int chosedSize, int nomal, int hei) {
+    public void initSize(int chosedSize,int nomal,int hei) {
 
         //获取系统的
         chooseSize = SystemUtil.dp2px(getContext(), chosedSize);
@@ -95,11 +95,11 @@ public class PreviewIndicator extends LinearLayout {
         params.setMargins(height, 0, 0, 0);
         imageView.setLayoutParams(params);
     }
-//
-//    /**
-//     * 设置未选中指示器点的宽度
-//     * @param imageView
-//     */
+
+    /**
+     * 设置未选中指示器点的宽度
+     * @param imageView
+     */
     private void setSelectedState(ImageView imageView) {
         imageView.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.bg_fa6a13_r6));
         LayoutParams params = new LayoutParams(chooseSize, height);
@@ -107,16 +107,16 @@ public class PreviewIndicator extends LinearLayout {
         imageView.setLayoutParams(params);
     }
 
-//    /**
-//     * 设置哪个指示器的点为选中的点
-//     * @param position 该选中的点
-//     */
+    /**
+     * 设置哪个指示器的点为选中的点
+     * @param position 该选中的点
+     */
     public void setSelected(int position) {
         for (int i = 0; i < mImageList.size(); i++) {
             ImageView imageView = mImageList.get(i);
             int curPosition = position % mImageList.size();
             if (i == curPosition) {
-               setSelectedState(imageView);
+                setSelectedState(imageView);
             } else {
                 setNomalState(imageView);
             }

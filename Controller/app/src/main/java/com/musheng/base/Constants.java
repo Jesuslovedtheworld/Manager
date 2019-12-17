@@ -8,7 +8,7 @@ public interface Constants {
     //是否为debug状态,正式上线版本需要改为false
     boolean isDebug = true;
     String ErrorTAG = "错误日志";
-    String DebugTAG = "错误日志";
+    String DebugTAG = "测试日志";
 
     //判断手机号
     String telRegex = "^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(17([1-3]|[5-9]))|(18[0-9]))\\d{8}$";

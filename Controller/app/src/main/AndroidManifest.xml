@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.musheng.ui.MainActivity">
+        <activity android:name="com.musheng.ui.home.MainActivity">
 
         </activity>
         <activity android:name="com.musheng.ui.main.GuideActivity">

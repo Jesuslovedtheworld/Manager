@@ -12,11 +12,8 @@ public class GuideViewAdapter extends PagerAdapter {
 
     public ArrayList<View>  views ;
 
-    public ViewPager viewPager;
-
-    public GuideViewAdapter(ArrayList<View> views, ViewPager viewPager) {
+    public GuideViewAdapter(ArrayList<View> views) {
         this.views = views;
-        this.viewPager = viewPager;
     }
 
     @Override
