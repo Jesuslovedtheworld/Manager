@@ -37,6 +37,7 @@ public class GuideActivity extends BaseActivity<EmptyView, EmptyPresenter> imple
         Boolean jump = (Boolean) SpUtil.getParam(Constants.isJump, false);
         if (jump){
             startActivity(intent);
+            finish();
         }
         return null;
     }

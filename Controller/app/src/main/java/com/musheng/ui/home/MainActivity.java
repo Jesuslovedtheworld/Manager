@@ -3,6 +3,7 @@ package com.musheng.ui.home;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 
+import com.androidkun.xtablayout.XTabLayout;
 import com.musheng.base.BaseActivity;
 import com.musheng.controller.R;
 import com.musheng.mvpView.EmptyView;
@@ -14,7 +15,7 @@ public class MainActivity extends BaseActivity<EmptyView,EmptyPresenter> {
 
 
     @BindView(R.id.id_main_tab)
-    TabLayout mTab;
+    XTabLayout mTab;
     @BindView(R.id.id_main_vp)
     ViewPager mVp;
     @Override
@@ -29,8 +30,7 @@ public class MainActivity extends BaseActivity<EmptyView,EmptyPresenter> {
 
     @Override
     protected void initView() {
-        mVp.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTab));
-        mTab.setupWithViewPager(mVp);
+
 
     }
 }

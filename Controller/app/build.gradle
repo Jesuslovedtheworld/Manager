@@ -56,5 +56,6 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-6'
 
     implementation files('libs/bcprov-jdk15on-1.56-sources.jar')
+    implementation 'com.androidkun:XTabLayout:1.1.3'
 
 }
