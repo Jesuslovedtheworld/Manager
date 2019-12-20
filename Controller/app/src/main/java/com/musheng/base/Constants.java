@@ -9,6 +9,7 @@ public interface Constants {
     boolean isDebug = true;
     String ErrorTAG = "错误日志";
     String DebugTAG = "测试日志";
+    String isJump = "JUMP";
 
     //判断手机号
     String telRegex = "^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(17([1-3]|[5-9]))|(18[0-9]))\\d{8}$";
