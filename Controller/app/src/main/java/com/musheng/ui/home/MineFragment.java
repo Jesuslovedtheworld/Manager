@@ -20,7 +20,7 @@ public class MineFragment extends BaseFragment<EmptyView, EmptyPresenter> {
 
     @Override
     protected EmptyPresenter initPresenter() {
-        return null;
+        return new EmptyPresenter();
     }
 
     @Override

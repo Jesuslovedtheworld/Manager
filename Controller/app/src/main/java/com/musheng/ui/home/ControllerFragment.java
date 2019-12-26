@@ -15,7 +15,7 @@ import com.musheng.presenter.EmptyPresenter;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PlayFragment extends BaseFragment<EmptyView,EmptyPresenter>{
+public class ControllerFragment extends BaseFragment<EmptyView,EmptyPresenter>{
 
     @Override
     protected EmptyPresenter initPresenter() {
@@ -24,6 +24,6 @@ public class PlayFragment extends BaseFragment<EmptyView,EmptyPresenter>{
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_play;
+        return R.layout.fragment_controller;
     }
 }

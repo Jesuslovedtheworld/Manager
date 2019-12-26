@@ -44,7 +44,7 @@ public class MainActivity extends BaseActivity<EmptyView,EmptyPresenter> {
     private void setAdapter() {
         MainPagerAdapter adapter = new MainPagerAdapter(getSupportFragmentManager(), baseFragments);
         mVp.setAdapter(adapter);
-        mTab.setTabsFromPagerAdapter(adapter);
+
     }
 
     private void initFragment() {
@@ -52,14 +52,17 @@ public class MainActivity extends BaseActivity<EmptyView,EmptyPresenter> {
         BooksFragment booksFragment = new BooksFragment();
         MineFragment mineFragment = new MineFragment();
         PlayFragment playFragment = new PlayFragment();
+        ControllerFragment controllerFragment = new ControllerFragment();
         baseFragments.add(booksFragment);
         baseFragments.add(mineFragment);
         baseFragments.add(playFragment);
+        baseFragments.add(controllerFragment);
     }
 
     private void initTable() {
-            mTab.addTab(mTab.newTab().setText("我").setIcon(R.drawable.bg_eaeaea_r6));
-            mTab.addTab(mTab.newTab().setText("你").setIcon(R.drawable.bg_eaeaea_r6));
-            mTab.addTab(mTab.newTab().setText("他").setIcon(R.drawable.bg_eaeaea_r6));
+            mTab.addTab(mTab.newTab().setText("我").setIcon(R.mipmap.banmi_highlight));
+            mTab.addTab(mTab.newTab().setText("你").setIcon(R.mipmap.banmi_highlight));
+            mTab.addTab(mTab.newTab().setText("他").setIcon(R.mipmap.banmi_highlight));
+            mTab.addTab(mTab.newTab().setText("四").setIcon(R.mipmap.banmi_highlight));
     }
 }
