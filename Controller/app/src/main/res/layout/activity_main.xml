@@ -12,21 +12,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/id_main_vp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_0"
-            android:layout_weight="9"
-            />
 
         <android.support.design.widget.TabLayout
-            app:tabPaddingEnd="@dimen/dp_5"
-            app:tabPaddingStart="@dimen/dp_5"
             android:id="@+id/id_main_tab"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_0"
             android:layout_weight="1"
+            app:tabIndicatorHeight="@dimen/dp_0"
             />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_main_vp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="9" />
+
+
     </LinearLayout>
 
     <android.support.design.widget.NavigationView

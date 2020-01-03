@@ -12,12 +12,13 @@ import java.util.ArrayList;
 public class MainPagerAdapter extends FragmentStatePagerAdapter {
 
     private ArrayList<BaseFragment> fragments;
+    private ArrayList<String> strings;
 
-    public MainPagerAdapter(FragmentManager fm, ArrayList<BaseFragment> fragments) {
+    public MainPagerAdapter(FragmentManager fm, ArrayList<BaseFragment> fragments, ArrayList<String> strings) {
         super(fm);
         this.fragments = fragments;
+        this.strings = strings;
     }
-
 
     @Override
     public Fragment getItem(int i) {
@@ -29,4 +30,9 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
         return fragments.size();
     }
 
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return strings.get(position);
+    }
 }

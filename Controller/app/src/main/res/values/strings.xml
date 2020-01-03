@@ -3,4 +3,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_mine">我的</string>
+    <string name="title_books">书籍</string>
+    <string name="title_three">三</string>
+    <string name="title_one">一</string>
 </resources>

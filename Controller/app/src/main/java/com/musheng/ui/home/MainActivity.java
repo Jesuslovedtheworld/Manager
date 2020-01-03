@@ -23,6 +23,7 @@ public class MainActivity extends BaseActivity<EmptyView,EmptyPresenter> {
     @BindView(R.id.id_main_vp)
     ViewPager mVp;
     private ArrayList<BaseFragment> baseFragments;
+    private ArrayList<Integer> strings;
 
     @Override
     protected EmptyPresenter initPresenter() {
@@ -36,19 +37,19 @@ public class MainActivity extends BaseActivity<EmptyView,EmptyPresenter> {
 
     @Override
     protected void initView() {
-            initTable();
             initFragment();
             setAdapter();
     }
 
     private void setAdapter() {
-        MainPagerAdapter adapter = new MainPagerAdapter(getSupportFragmentManager(), baseFragments);
+        MainPagerAdapter adapter = new MainPagerAdapter(getSupportFragmentManager(), baseFragments,strings);
         mVp.setAdapter(adapter);
-
+        mTab.setupWithViewPager(mVp);
     }
 
     private void initFragment() {
         baseFragments = new ArrayList<>();
+        strings = new ArrayList<>();
         BooksFragment booksFragment = new BooksFragment();
         MineFragment mineFragment = new MineFragment();
         PlayFragment playFragment = new PlayFragment();
@@ -57,12 +58,10 @@ public class MainActivity extends BaseActivity<EmptyView,EmptyPresenter> {
         baseFragments.add(mineFragment);
         baseFragments.add(playFragment);
         baseFragments.add(controllerFragment);
-    }
+        strings.add(R.string.title_one);
+        strings.add(R.string.title_one);
+        strings.add(R.string.title_one);
+        strings.add(R.string.title_one);
 
-    private void initTable() {
-            mTab.addTab(mTab.newTab().setText("我").setIcon(R.mipmap.banmi_highlight));
-            mTab.addTab(mTab.newTab().setText("你").setIcon(R.mipmap.banmi_highlight));
-            mTab.addTab(mTab.newTab().setText("他").setIcon(R.mipmap.banmi_highlight));
-            mTab.addTab(mTab.newTab().setText("四").setIcon(R.mipmap.banmi_highlight));
     }
 }
