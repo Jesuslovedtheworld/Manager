@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ClockView">
+        <!--表环颜色-->
+        <attr name="colck_ring_color" format="color"/>
+        <!--时钟颜色-->
+        <attr name="colck_hour_color" format="color"/>
+        <!--分钟颜色-->
+        <attr name="color_min_color" format="color"/>
+        <!--秒钟颜色-->
+        <attr name="color_second_color" format="color"/>
+        <!--大刻度颜色-->
+        <attr name="color_big_scale_color" format="color"/>
+        <!--小刻度颜色-->
+        <attr name="color_small_scale_color" format="color"/>
+        <!--文字颜色-->
+        <attr name="color_text_color" format="color"/>
+        <!--表盘颜色是否充满-->
+        <attr name="color_bg_color" format="boolean"/>
+
+    </declare-styleable>
+</resources>

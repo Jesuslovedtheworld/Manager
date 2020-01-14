@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 
-public class MainActivity extends BaseActivity<EmptyView,EmptyPresenter> {
+public class MainActivity extends BaseActivity<EmptyView, EmptyPresenter> {
 
 
     @BindView(R.id.id_main_tab)
@@ -23,7 +23,7 @@ public class MainActivity extends BaseActivity<EmptyView,EmptyPresenter> {
     @BindView(R.id.id_main_vp)
     ViewPager mVp;
     private ArrayList<BaseFragment> baseFragments;
-    private ArrayList<Integer> strings;
+    private ArrayList<String> strings;
 
     @Override
     protected EmptyPresenter initPresenter() {
@@ -37,12 +37,12 @@ public class MainActivity extends BaseActivity<EmptyView,EmptyPresenter> {
 
     @Override
     protected void initView() {
-            initFragment();
-            setAdapter();
+        initFragment();
+        setAdapter();
     }
 
     private void setAdapter() {
-        MainPagerAdapter adapter = new MainPagerAdapter(getSupportFragmentManager(), baseFragments,strings);
+        MainPagerAdapter adapter = new MainPagerAdapter(getSupportFragmentManager(), baseFragments, strings);
         mVp.setAdapter(adapter);
         mTab.setupWithViewPager(mVp);
     }
@@ -58,10 +58,10 @@ public class MainActivity extends BaseActivity<EmptyView,EmptyPresenter> {
         baseFragments.add(mineFragment);
         baseFragments.add(playFragment);
         baseFragments.add(controllerFragment);
-        strings.add(R.string.title_one);
-        strings.add(R.string.title_one);
-        strings.add(R.string.title_one);
-        strings.add(R.string.title_one);
+        strings.add("一");
+        strings.add("二");
+        strings.add("四");
+        strings.add("四");
 
     }
 }
